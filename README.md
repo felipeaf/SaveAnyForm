@@ -91,15 +91,15 @@ Just setup your server to connect your mongodb, create a public_html folder insi
       Full Name:<br>
       <input type="text" name="fullname" required>
       <br>
-      <p>Check your prefered language.</p>
+      <p>Choose your gender</p>
       <label for="aradiogrp1">Male</label>
-      <input id="aradiogrp1" type="radio" name="preferedLanguage" value="MALE"><br>
+      <input id="aradiogrp1" type="radio" name="gender" value="MALE"><br>
 
       <label for="aradiogrp2">Female</label>
-      <input id="aradiogrp2" type="radio" name="preferedLanguage" value="FEMALE"><br>
+      <input id="aradiogrp2" type="radio" name="gender" value="FEMALE"><br>
 
       <label for="aradiogrp3">Other</label>
-      <input id="aradiogrp3" type="radio" name="preferedLanguage" value="OTHER"><br>
+      <input id="aradiogrp3" type="radio" name="gender" value="OTHER"><br>
       
       <p>Check the languages you are most proficient in.</p>
       <input type="checkbox" id="acheckboxgrp1" name="proficientLanguages" value="JS">
@@ -129,8 +129,8 @@ Just run from your browser (*saveAnyFormURL*/aform.html, supposing aform.html is
         "createdAt" : ISODate("2021-03-04T13:41:46.280Z")
     },
     "data" : {
-        "fullname" : "name",
-        "preferedLanguage" : "MALE",
+        "fullname" : "Felipe Alexandre Ferreira",
+        "gender" : "MALE",
         "proficientLanguages" : [ 
             "JS", 
             "PYTHON"
