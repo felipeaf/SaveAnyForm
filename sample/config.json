@@ -1,0 +1,20 @@
+{
+    "persistance": {
+        "type": "mongodb",
+        "config": {
+            "uri": "mongodb://localhost:27017",
+            "database": "saveanyform-%%FORMID%%",
+            "collection": "saf-%%FORMID%%"
+        }
+    },
+    "server": {
+        "httpPort": 8080,
+        "httpsPort": 8443,
+        "cert": {
+            "keyFile": "path-to-sslcert-private.key",
+            "certFile": "path-to-sslcert.crt"
+        },
+        "successMsg": "Form saved! Thank you!",
+        "errorMsg": "Something went wrong! Sorry!"
+    }
+}
