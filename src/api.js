@@ -20,7 +20,6 @@ const http = require('http');
 const https = require('https');
 const fs = require('fs');
 const express = require('express');
-const bodyParser = require('body-parser');
 
 class Api {
     constructor(config, dao) {
@@ -30,6 +29,7 @@ class Api {
         this._certFile = config.cert.certFile;
         this._successMsg = config.successMsg;
         this._errorMsg = config.errorMsg;
+        this._destDir = config.destDir
         this._dao = dao;
     }
 
@@ -39,12 +39,10 @@ class Api {
         //etag:false means that if you change anything in your public_html it will
         //take effect immediactly (no restart needed)
         app.use(express.static('public_html', { etag: false }));
-
         // parse application/x-www-form-urlencoded
-        app.use(bodyParser.urlencoded({ extended: true }));
-        
+        app.use(express.urlencoded({ extended: true }));
         // parse application/json, just in case you wish to handle some ajax frorm instead
-        app.use(bodyParser.json());
+        app.use(express.json());
 
         //TODO
         app.post('/:formid', async (req, res) => {

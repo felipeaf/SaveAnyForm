@@ -35,7 +35,18 @@ run();
  * TODO LIST
  * - support to GET method (default form method)
  * - entrypoint to get csv given formid, columns and a configurable password.
- *   for checkbox we can transform an array in multiple boolean columns (like "item1Checked", "item2Checked", ...)
+ *     for checkbox we can transform an array in multiple boolean columns (like "item1Checked", "item2Checked", ...)
+ * - file support (enctype multipart/form-data)
+ * - support js validation in both sides
+ * - json schemas
+ *     validantion and also, declare an schema can cast some types
+ * - NeDB or tingo support
+ * - Web GUI configuration wizard
+ * - Web GUI form wizard
+ * - authentication (basic password)
+ * - authentication  (jwt per submit, for backend)
+ * - tokens with limited use numbers (for users/links)
+ 
  * 
  * CSV notes:
  * - Excel doesn't expect UTF-8. (here it works with ISO-8859-1 instead)
