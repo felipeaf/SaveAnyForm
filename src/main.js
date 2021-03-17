@@ -19,12 +19,12 @@
 let config = require('../config.json');
 //in the future, config.persistance.type is supposed to be used as parameter for a factory for persistance,
 //when we have more persistance types (filesystem, mysql, etc...)
-let persistance = new (require ('./dao/mongodao'))(config.persistence.config);
-let server = new (require('./api'))(config.server, persistance);
+let dao = new (require ('./dao/mongodao'))(config.persistence.config);
+let server = new (require('./api'))(config.server, dao);
 
 
 async function run() {
-    await persistance.connect();
+    await dao.connect();
     server.run();
 }
 run();
